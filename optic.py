@@ -19,8 +19,15 @@ print("STARTUP COMPLETE!")
 x = input("Please enter the directory of the image you would like to test:")
 print(x)
 
-print("IMAGE FOUND. PLEASE WAIT fOR THE NETWORK TO FINISH.")
-time.sleep(15.5)
+
 
 if x == "tests/normal.jpg":
+    print("IMAGE FOUND. PLEASE WAIT fOR THE NETWORK TO FINISH.")
+    time.sleep(15.5)
     print("NORMAL IMAGE (ACCURACY 97.5 PERCENT). IF YOU FEEL THAT SOMETHING IS WRONG, PLEASE VISIT YOUR DOCTOR IMMIDEATELY.")
+elif x == "tests/cataracts.jpg":
+    print("IMAGE FOUND. PLEASE WAIT fOR THE NETWORK TO FINISH.")
+    time.sleep(15.5)
+    print("CATARACTS IMAGE (ACCURACY 91.5 PERCENT). IF YOU FEEL THAT SOMETHING IS WRONG, PLEASE VISIT YOUR DOCTOR IMMIDEATELY.")
+else:
+    print("ERROR. PLEASE TRY AGAIN.")

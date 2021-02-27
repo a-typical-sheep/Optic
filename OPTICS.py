@@ -32,7 +32,7 @@ class SampleApp(tk.Tk):
         container.grid_rowconfigure(0, weight=1)
         container.grid_columnconfigure(0, weight=1)
         self.geometry("700x500+600+200")  # Width x Height + Position  Right + Position Left
-        self.title('IRIS - Interface')
+        self.title('OPTICS - Interface')
 
         self.frames = {}
         for F in (LoginPage, Home, Methods):
@@ -58,7 +58,7 @@ class LoginPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        label = tk.Label(self, text="Welcome to IRIS UI", font=controller.title_font)
+        label = tk.Label(self, text="Welcome to OPTICS UI", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
 
         username = ""  # that's the given username
@@ -88,7 +88,7 @@ class Home(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        label = tk.Label(self, text="IRIS - Home", font=controller.title_font)
+        label = tk.Label(self, text="OPTICS - Home", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
 
         url1 = tk.StringVar()
@@ -149,7 +149,7 @@ class Methods(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        label = tk.Label(self, text="IRIS - Methods", font=controller.title_font)
+        label = tk.Label(self, text="OPTICS - Methods", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
 
         percent = random.randint(85, 94)
